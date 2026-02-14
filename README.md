@@ -1,35 +1,42 @@
-# REST-API
-REST API using Jersey
-📌 Project Overview
+#REST API
 
-This project demonstrates a simple REST API built using Jersey (JAX-RS) framework and deployed on Apache Tomcat server.
+REST stands for Representational State Transfer.
+A REST API (Application Programming Interface) is a way for applications to communicate with each other over HTTP using standard web methods.
 
-The API provides basic endpoint functionality to understand how REST services work in Java.
+It follows a stateless, client-server architecture where each request from the client contains all the information needed for the server to process it.
 
-🛠️ Technologies Used
+🔹 Key Characteristics of REST
 
-Java
+Stateless communication
 
-Jersey (JAX-RS)
+Uses HTTP methods like:
 
-Maven
+GET – Retrieve data
 
-Apache Tomcat
+POST – Create data
 
-Servlet API
+PUT – Update data
 
-📂 Project Structure
-rest-api-jersy/
-│
-├── src/
-│   ├── main/
-│   │   ├── java/
-│   │   │   ├── com.xworkz.jersydemo.config
-│   │   │   │     └── ApplicationConfig.java
-│   │   │   └── com.xworkz.jersydemo.resource
-│   │   │         └── HelloResource.java
-│   │   └── webapp/
-│   │         └── WEB-INF/
-│   │               └── web.xml
-│
-└── pom.xml
+DELETE – Remove data
+
+Uses standard HTTP status codes
+
+Supports data formats like JSON and XML
+
+🔹 Why REST API is Important?
+
+Lightweight and fast
+
+Platform independent
+
+Easy to integrate with web and mobile applications
+
+Widely used in modern web development
+
+🔹 Example of REST Endpoint
+GET http://localhost:8080/api/hello
+
+
+This request retrieves data from the server.
+
+This project demonstrates how to build a simple REST API using Java and Jersey framework.
