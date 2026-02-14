@@ -1,0 +1,23 @@
+Today Work Summary – Jersey REST API
+Date: 14-02-2026
+
+Today I worked on understanding and implementing a basic REST API using the Jersey (JAX-RS) framework.
+
+Tasks Completed:
+- Learned the fundamentals of REST architecture.
+- Understood HTTP methods like GET.
+- Configured Jersey using ResourceConfig.
+- Implemented @ApplicationPath to define base URL.
+- Created a HelloResource class.
+- Used @Path, @GET, and @Produces annotations.
+- Deployed the project on Apache Tomcat server.
+- Successfully tested the endpoint in the browser.
+
+Working Endpoint:
+http://localhost:8080/rest-api-jersy/api/hello
+
+Output:
+Hello from Jersey REST API!
+
+Author:
+Sannidhi GS
