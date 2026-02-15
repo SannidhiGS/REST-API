@@ -1,0 +1,26 @@
+Jersey REST API – Learning Summary
+
+Today I worked on building REST APIs using Jersey (JAX-RS).
+
+Topics Covered:
+1. ApplicationPath – Defined base URL using @ApplicationPath("/api").
+2. Resource Path – Created endpoints using @Path.
+3. GET Method – Implemented basic GET request.
+4. QueryParam – Received client input using ?name=value.
+5. PathParam – Handled dynamic URL values.
+6. Produces – Returned TEXT and JSON responses.
+
+Example Endpoints:
+- /api/hello
+- /api/hello/query?name=Sannidhi
+- /api/hello/path/Sannidhi
+
+Concepts Learned:
+- REST architecture
+- HTTP methods
+- URL mapping
+- Parameter handling in Jersey
+- JSON response basics
+
+Author:
+Sannidhi GS
