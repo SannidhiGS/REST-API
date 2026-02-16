@@ -1,0 +1,198 @@
+JERSEY REST API – COMPLETE NOTES
+Author: Sannidhi GS
+
+-----------------------------------------
+1. INTRODUCTION TO REST
+-----------------------------------------
+REST (Representational State Transfer) is an architectural style
+used to build web services.
+
+REST APIs allow communication between client and server
+using HTTP methods.
+
+Common HTTP Methods:
+- GET    → Retrieve data
+- POST   → Create data
+- PUT    → Update data
+- DELETE → Remove data
+
+REST is:
+- Stateless
+- Client-Server based
+- Lightweight
+- Platform independent
+
+
+-----------------------------------------
+2. JERSEY (JAX-RS)
+-----------------------------------------
+Jersey is the reference implementation of JAX-RS
+(Java API for RESTful Web Services).
+
+It helps build REST APIs in Java using annotations.
+
+
+-----------------------------------------
+3. APPLICATION CONFIGURATION
+-----------------------------------------
+@ApplicationPath("/api")
+
+Purpose:
+Defines the base URL for all REST endpoints.
+
+Example:
+If @ApplicationPath("/api")
+Then all APIs start with:
+
+/api
+
+
+-----------------------------------------
+4. RESOURCE PATH
+-----------------------------------------
+@Path("/hello")
+
+Purpose:
+Defines specific endpoint path.
+
+If:
+@ApplicationPath("/api")
+@Path("/hello")
+
+Final URL:
+http://localhost:8080/rest-api-jersy/api/hello
+
+
+-----------------------------------------
+5. BASIC GET METHOD
+-----------------------------------------
+@GET
+@Produces(MediaType.TEXT_PLAIN)
+
+Purpose:
+Handles HTTP GET request and returns response.
+
+Example Output:
+Hello Jersey Rest API
+
+
+-----------------------------------------
+6. QUERY PARAM
+-----------------------------------------
+@QueryParam("name")
+
+Purpose:
+Receives client input using ?key=value format.
+
+Example URL:
+http://localhost:8080/rest-api-jersy/api/hello/query?name=Sannidhi
+
+Output:
+Hello Sannidhi
+
+Used for:
+Filtering, searching, optional parameters
+
+
+-----------------------------------------
+7. PATH PARAM
+-----------------------------------------
+@Path("/path/{name}")
+@PathParam("name")
+
+Purpose:
+Receives value directly from URL path.
+
+Example URL:
+http://localhost:8080/rest-api-jersy/api/hello/path/Sannidhi
+
+Output:
+Hello Sannidhi (from PathParam)
+
+Used for:
+Accessing specific resources like:
+/users/101
+/products/25
+
+
+-----------------------------------------
+8. PRODUCES
+-----------------------------------------
+@Produces(MediaType.TEXT_PLAIN)
+
+Returns plain text.
+
+@Produces(MediaType.APPLICATION_JSON)
+
+Returns JSON format.
+
+
+-----------------------------------------
+9. JSON RESPONSE
+-----------------------------------------
+@Produces(MediaType.APPLICATION_JSON)
+
+Example:
+{
+  "message": "Hello Jersey REST API"
+}
+
+Used to send structured data to client.
+
+
+-----------------------------------------
+10. FULL URL STRUCTURE
+-----------------------------------------
+http://localhost:8080/rest-api-jersy/api/hello
+
+Breakdown:
+localhost  → Local machine
+8080       → Tomcat port
+rest-api-jersy → Project name
+/api       → Application path
+/hello     → Resource path
+
+
+-----------------------------------------
+11. DIFFERENCE: QUERY vs PATH PARAM
+-----------------------------------------
+
+QueryParam:
+- Uses ?key=value
+- Optional
+- Used for filtering
+
+PathParam:
+- Part of URL path
+- Mandatory
+- Used to identify resource
+
+
+-----------------------------------------
+12. WHAT I COMPLETED
+-----------------------------------------
+- Understood REST architecture
+- Configured Jersey using ResourceConfig
+- Implemented ApplicationPath
+- Created Resource class
+- Implemented GET method
+- Implemented QueryParam
+- Implemented PathParam
+- Returned JSON response
+- Tested APIs using browser and curl
+
+
+-----------------------------------------
+NEXT TOPICS TO LEARN
+-----------------------------------------
+- POST method
+- @Consumes
+- Request body handling
+- Response object with status code
+- Exception handling
+- Database integration
+
+
+-----------------------------------------
+END OF NOTES
+-----------------------------------------
